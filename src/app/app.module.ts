@@ -21,6 +21,7 @@ import { About } from './about';
 import { NoContent } from './no-content';
 import {OrderModule} from "./order";
 import {CustomerModule} from "./customer";
+import {DemoModule} from "./demo";
 import {LoginComponent} from './login'
 import { AuthenticationService } from './shared/services/authentication.service';
 import { MaterialModule } from '@angular/material';
@@ -58,6 +59,7 @@ type StoreType = {
     HomeModule,
     CustomerModule,
     DashboardModule,
+    DemoModule,
     ROUTES,
     MaterialModule.forRoot()
   ],

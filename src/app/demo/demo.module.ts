@@ -2,9 +2,9 @@ import {NgModule} from '@angular/core'
 import {CommonModule} from '@angular/common'
 import {FormsModule} from '@angular/forms'
 
-import {CustomerNewComponent} from "./customer-new.component";
+import {DemoComponent} from "./demo.component";
 
-import { customerRouting } from './customer.routing';
+import { demoRouting } from './demo.routing';
 
 import {SelectModule} from 'angular2-select';
 import {AuthorisationService} from '../shared/services/authorisation.service';
@@ -13,13 +13,13 @@ import { MaterialModule } from '@angular/material';
 
 @NgModule({
   declarations: [
-    CustomerNewComponent
+    DemoComponent
   ],
   imports: [
     CommonModule,
     FormsModule,
     SelectModule,
-    customerRouting,
+    demoRouting,
     MaterialModule
   ],
   providers: [
@@ -28,4 +28,4 @@ import { MaterialModule } from '@angular/material';
   ]
 })
 
-export class CustomerModule{}
+export class DemoModule{}
