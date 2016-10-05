@@ -3,13 +3,13 @@
   <md-sidenav #sidenav mode="side" class="app-sidenav">
     <md-list>
       <md-list-item>
-        <button md-button>FLAT</button>
+        <button md-button (click)="navigateTo('dashboard')">Dashboard</button>
       </md-list-item>
       <md-list-item>
-        <button md-button>FLAT</button>
+        <button md-button (click)="navigateTo('order')">Order</button>
       </md-list-item>
       <md-list-item>
-        <button md-button>FLAT</button>
+        <button md-button (click)="navigateTo('customer')">Customer</button>
       </md-list-item>
     </md-list>
   </md-sidenav>

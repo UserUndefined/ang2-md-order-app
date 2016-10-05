@@ -1,4 +1,5 @@
 import { Component, ViewEncapsulation } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { AppState } from './app.service';
 
@@ -28,8 +29,7 @@ export class App {
 
   progress: number = 0;
 
-  constructor(
-    public appState: AppState) {
+  constructor(public appState: AppState, private router: Router) {
     setInterval(() => {
       this.progress = (this.progress + Math.floor(Math.random() * 4) + 1) % 100;
     }, 200);
@@ -39,4 +39,7 @@ export class App {
     console.log('Initial App State', this.appState.state);
   }
 
+  navigateTo(target){
+    this.router.navigate(['/' + target]);
+  }
 }
