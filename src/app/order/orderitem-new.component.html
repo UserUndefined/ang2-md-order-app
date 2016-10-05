@@ -1,0 +1,46 @@
+<div>
+  <div>
+    <p>{{order.customer.name}}, {{order.customer.postcode}}</p>
+  </div>
+  <form name="newServiceForm" class="form-horizontal">
+    <div class="form-group row">
+      <div class="col-sm-3">
+        <ng-select
+          [options]="products"
+          placeholder="Select a product"
+          name="productSelect"
+          [(ngModel)]="newItem.product"
+        >
+        </ng-select>
+        <p>{{newItem.product}}</p>
+        <p>{{errorMessage}}</p>
+      </div>
+      <div class="col-sm-3">
+        <ng-select
+          [options]="areas"
+          placeholder="Select an area"
+          name="areaSelect"
+          [(ngModel)]="newItem.area"
+        >
+        </ng-select>
+        <p>{{newItem.area}}</p>
+        <p>{{errorMessage}}</p>
+      </div>
+      <div class="col-sm-3">
+        <ng-select
+          [options]="headings"
+          placeholder="Select a heading"
+          name="headingSelect"
+          [(ngModel)]="newItem.heading"
+        >
+        </ng-select>
+        <p>{{newItem.heading}}</p>
+        <p>{{errorMessage}}</p>
+      </div>
+      <div class="btn-group col-sm-3">
+        <button id="single-button-new-item" type="button" class="btn btn-primary" (click)="addNewService()">Add</button>
+      </div>
+    </div>
+  </form>
+  <p *ngIf="order.totalValue > 0">{{order.totalValue}}</p>
+</div>

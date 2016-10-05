@@ -1,0 +1,24 @@
+<div>
+  <div layout="column">
+    <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+      <ngb-panel title="{{service.product.name}} {{service.area.name}} {{service.heading.name}} £{{service.product.price}}" *ngFor="let service of order.services; let idx = index">
+        <template ngbPanelContent>
+          <div class="form-group">
+            <label>Company Name</label>
+            <input type="text" class="form-control" placeholder="Company Name" [(ngModel)]="service.advert.name">
+          </div>
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input type="text" class="form-control" placeholder="Telephone" [(ngModel)]="service.advert.telephone">
+          </div>
+          <div class="form-group">
+            <label>Url</label>
+            <input type="text" class="form-control" placeholder="URL" [(ngModel)]="service.advert.url">
+          </div>
+        </template>
+      </ngb-panel>
+    </ngb-accordion>
+    <p>Total: £{{order.totalValue}}</p>
+    <button ng-disabled="order.totalValue == 0" class="btn btn-primary btn-block" (click)="saveNewOrder()">Save Order</button>
+  </div>
+</div>
