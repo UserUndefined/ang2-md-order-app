@@ -1,0 +1,13 @@
+<div class="app-content">
+  <md-card class="demo-card demo-basic">
+  <md-toolbar color="primary">Customer List</md-toolbar>
+  <md-card-content>
+    <md-list>
+      <md-list-item *ngFor="let customer of customerList">
+        <h3 md-line>{{customer.name}}</h3>
+        <p md-line class="demo-secondary-text">{{customer.postcode}}</p>
+      </md-list-item>
+    </md-list>
+  </md-card-content>
+</md-card>
+</div>

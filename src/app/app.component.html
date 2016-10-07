@@ -9,7 +9,10 @@
         <button md-button (click)="navigateTo('order')">Order</button>
       </md-list-item>
       <md-list-item>
-        <button md-button (click)="navigateTo('customer/new')">Customer</button>
+        <button md-button (click)="navigateTo('customer/new')">Customer New</button>
+      </md-list-item>
+      <md-list-item>
+        <button md-button (click)="navigateTo('customer/list')">Customer List</button>
       </md-list-item>
       <md-list-item>
         <button md-button (click)="navigateTo('demo')">Demo</button>
@@ -22,17 +25,14 @@
       <i class="material-icons app-toolbar-menu">menu</i>
     </button>
 
-    Angular Material2 Example App
+    Customer Maintenance
 
     <span class="app-toolbar-filler"></span>
     <button md-button (click)="isDarkTheme = !isDarkTheme">TOGGLE DARK THEME</button>
   </md-toolbar>
 
-  <div class="app-content">
-
     <router-outlet></router-outlet>
 
-  </div>
 </md-sidenav-layout>
 
 <span class="app-action" [class.m2app-dark]="isDarkTheme">

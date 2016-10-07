@@ -10,6 +10,7 @@ import {HeadingService, Heading} from "../shared/services";
 
 @Component({
   selector: 'customer-new',
+  styleUrls: [ './customer.style.css' ],
   templateUrl: './customer-new.component.html'
 })
 export class CustomerNewComponent implements OnInit {

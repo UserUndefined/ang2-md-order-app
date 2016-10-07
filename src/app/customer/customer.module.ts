@@ -3,6 +3,7 @@ import {CommonModule} from '@angular/common'
 import {FormsModule} from '@angular/forms'
 
 import {CustomerNewComponent} from "./customer-new.component";
+import {CustomerListComponent} from "./customer-list.component";
 
 import { customerRouting } from './customer.routing';
 
@@ -13,7 +14,8 @@ import { MaterialModule } from '@angular/material';
 
 @NgModule({
   declarations: [
-    CustomerNewComponent
+    CustomerNewComponent,
+    CustomerListComponent
   ],
   imports: [
     CommonModule,

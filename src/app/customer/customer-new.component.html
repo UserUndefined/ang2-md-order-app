@@ -1,16 +1,35 @@
-<md-card class="demo-card demo-basic">
+<div class="app-content">
+  <md-card class="demo-card demo-basic">
   <md-toolbar color="primary">New Customer</md-toolbar>
   <md-card-content>
-      <form #customerNewForm="ngForm" (ngSubmit)="submitCustomerNew()" novalidate>
-        <md-input name="name" placeholder="Company Name" [(ngModel)]="customer.name"></md-input>
-        <md-input name="address1" placeholder="Address 1" [(ngModel)]="customer.address1"></md-input>
-        <md-input name="address2" placeholder="Address 2" [(ngModel)]="customer.address2"></md-input>
-        <md-input name="town" placeholder="Town" [(ngModel)]="customer.town"></md-input>
-        <md-input name="county" placeholder="County" [(ngModel)]="customer.county"></md-input>
-        <md-input name="postcode" placeholder="Postcode" [(ngModel)]="customer.postcode"></md-input>
-        <md-input name="telephone" placeholder="Telephone" [(ngModel)]="customer.telephone"></md-input>
-        <md-input name="email" placeholder="Email" [(ngModel)]="customer.email"></md-input>
-        <md-input name="url" placeholder="URL" [(ngModel)]="customer.url"></md-input>
+      <form #customerNewForm="ngForm" class="form-horizontal" (ngSubmit)="submitCustomerNew()" novalidate>
+        <div class="form-group">
+          <md-input class="md-input-full-width" name="name" placeholder="Company Name" [(ngModel)]="customer.name"></md-input>
+        </div>
+        <div class="form-group">
+        <md-input name="address1" class="md-input-full-width" placeholder="Address 1" [(ngModel)]="customer.address1"></md-input>
+        </div>
+        <div class="form-group">
+        <md-input name="address2" class="md-input-full-width" placeholder="Address 2" [(ngModel)]="customer.address2"></md-input>
+        </div>
+        <div class="form-group">
+        <md-input name="town" class="md-input-full-width" placeholder="Town" [(ngModel)]="customer.town"></md-input>
+        </div>
+        <div class="form-group">
+        <md-input name="county" class="md-input-full-width" placeholder="County" [(ngModel)]="customer.county"></md-input>
+        </div>
+        <div class="form-group">
+        <md-input name="postcode" class="md-input-full-width" placeholder="Postcode" [(ngModel)]="customer.postcode"></md-input>
+        </div>
+        <div class="form-group">
+        <md-input name="telephone" class="md-input-full-width" placeholder="Telephone" [(ngModel)]="customer.telephone"></md-input>
+        </div>
+        <div class="form-group">
+        <md-input name="email" class="md-input-full-width" placeholder="Email" [(ngModel)]="customer.email"></md-input>
+        </div>
+        <div class="form-group">
+        <md-input name="url" class="md-input-full-width" placeholder="URL" [(ngModel)]="customer.url"></md-input>
+        </div>
         <div [ngClass]="{'has-danger': classification.errors && (classification.dirty || classification.touched), 'has-success': !classification.errors && (classification.dirty || classification.touched), 'form-group': true}">
           <label>Classification</label>
           <ng-select
@@ -30,3 +49,4 @@
       </form>
   </md-card-content>
 </md-card>
+</div>
