@@ -1,7 +1,18 @@
-<div class="card-container">
-  <div class="row">
-    <div class="col-xlg-6 col-lg-6 col-md-10 col-sm-12 col-xs-12 offset-xlg-3 offset-lg-3 offset-md-1">
-      <calendar></calendar>
-    </div>
-  </div>
+<div class="app-content">
+      <md-card class="dash-card">
+        <calendar></calendar>
+      </md-card>
+      <md-card class="dash-card">
+        <md-card-title>New Customer</md-card-title>
+        <button md-raised-button color="primary">Create New Customer</button>
+      </md-card>
+      <md-card class="dash-card">
+        <md-card-title>Recent Customers</md-card-title>
+        <md-list>
+          <md-list-item *ngFor="let customer of customerList">
+            <h3 md-line>{{customer.name}}</h3>
+            <p md-line class="demo-secondary-text">{{customer.postcode}}</p>
+          </md-list-item>
+        </md-list>
+      </md-card>
 </div>

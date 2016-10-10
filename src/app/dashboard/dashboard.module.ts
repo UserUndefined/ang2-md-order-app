@@ -9,7 +9,7 @@ import { Calendar } from './calendar'
 import { BaFullCalendar } from '../shared/components';
 import {CalendarService} from './calendar/calendar.service';
 
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { MaterialModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -21,7 +21,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     CommonModule,
     FormsModule,
     dashboardRouting,
-    NgbModule
+    MaterialModule
   ],
   providers: [
     CalendarService
